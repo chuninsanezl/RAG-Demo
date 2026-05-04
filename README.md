@@ -56,8 +56,3 @@ curl -X POST 'http://localhost:8080/api/v1/rag/ask' \
   }'
 ```
 
-## 说明
-
-- 为了让示例真正闭环运行，我补了一层 JDBC 写库逻辑，把文章里的“切块与向量写入服务”接到了自定义表结构上。
-- Kafka 相关生产者/消费者类按文章保留，默认通过 `rag.ingest.kafka-enabled=false` 关闭监听器。
-- 当前工作区没有安装 Java 和 Maven，所以我已经完成代码落地，但没法在本机直接编译验证。
